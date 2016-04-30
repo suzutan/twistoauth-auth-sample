@@ -43,6 +43,6 @@ foreach($tweet as $v) {
 }
 
 //これはpostテスト
-var_dump($auth->post("statuses/update", ["status" => "@su2ca これはテストツイート " . time()] ));
+var_dump($auth->post("statuses/update", ["status" => "@{$tweet[0]->user->screen_name} これはテストツイート " . time()] ));
 
 
