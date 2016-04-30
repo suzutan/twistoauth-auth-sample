@@ -21,6 +21,9 @@ unset($_SESSION["auth"]);
 
 //承認情報から、OAuthのためのキーを取得
 $auth = $auth->renewWithAccessToken($oauth_verifier);
+//PINの場合
+//$auth = $auth->renewWithAccessToken($pin);
+
 
 echo "consumer_key is {$auth->ck}<br />";
 echo "consumer_secret is {$auth->cs}<br />";
